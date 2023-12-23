@@ -43,3 +43,5 @@ cmake_install.cmake
 Makefile
 *.cmake
 
+.DS_Store
+

@@ -1,20 +1,27 @@
 /*
  * =====================================================================================
  *
- *       Filename:  main_test.cpp
+ *       Filename:  main.cpp
  *
- *    Description:  main testing for the HPS 
+ *    Description:  GVSU Chemistry High Performance Solver 
  *
  *        Version:  1.0
- *        Created:  12/22/2023 12:04:41
+ *        Created:  12/22/2023 11:57:56
  *       Compiler:  g++
  *
  *         Author:  Jensen Holm & Dr. Erin Carrier 
- *   Organization:  Grand Valley State University 
+ *   Organization:  Grand Valley State University
  *
  * =====================================================================================
  */
 
-#include "gtest/gtest.h"
+#include <stdlib.h>
+#include <iostream>
+
+
+int main() {
+    std::cout << "Hello World" << std::endl;
+    return 1;
+}
 
 

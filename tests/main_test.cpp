@@ -1,26 +1,26 @@
 /*
  * =====================================================================================
  *
- *       Filename:  main.cpp
+ *       Filename:  main_test.cpp
  *
- *    Description:  GVSU Chemistry High Performance Solver 
+ *    Description:  main testing 
  *
  *        Version:  1.0
- *        Created:  12/22/2023 11:57:56
- *       Compiler:  g++
+ *        Created:  12/23/2023 10:55:32
+ *       Revision:  none
+ *       Compiler:  gcc
  *
  *         Author:  Jensen Holm & Dr. Erin Carrier 
- *   Organization:  Grand Valley State University
+ *   Organization:  Grand Valley State University 
  *
  * =====================================================================================
  */
 
 #include <stdlib.h>
+#include <gtest/gtest.h>
 
 
-int main() {
-
-    return 1;
-}
-
+TEST(simpleTest, Equality) {
+    EXPECT_EQ(1, 1);
+};
 

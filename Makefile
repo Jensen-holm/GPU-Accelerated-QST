@@ -1,6 +1,6 @@
 CC = nvcc
 TARGETS = hello_cuda.out
-KERNELS = src/kernels/hello_world1.cu src/kernels/hello_world1.cu
+KERNELS = src/kernels/hello_world1.cu src/kernels/hello_world2.cu
 
 build:
 	$(CC) src/main.cu -o $(TARGETS) $(KERNELS)

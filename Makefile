@@ -1,14 +1,17 @@
 CC = nvcc
+CFLAGS = -Xcompiler -Wall
+SRC = src/main.cu
 TARGETS = hello_cuda.out
-KERNELS = src/kernels/hello_world1.cu src/kernels/hello_world2.cu
+KERNELS = $(wildcard ./src/kernels*.cu)
 
 build:
-	$(CC) src/main.cu -o $(TARGETS) $(KERNELS)
+	$(CC) $(SRC) -o $(TARGETS) $(KERNELS)
 
 run:
-	$(CC) src/main.cu -o $(TARGETS) $(KERNELS)
+	$(CC) $(SRC) -o $(TARGETS) $(KERNELS)
 	./$(TARGETS)
 	rm -r $(TARGETS)
 
 clean:
 	rm -r $(TARGETS)
+

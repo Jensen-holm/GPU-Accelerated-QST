@@ -1,12 +1,14 @@
 CC = nvcc
-TARGETS = hello_cuda.out
-KERNELS = src/kernels/hello_world1.cu src/kernels/hello_world1.cu
+TARGETS = hps.out
+KERNELS = $(wildcard ./src/kernels*.cu)
+UTILS = $(wildcard ./src/utils*.cpp)
+MAINSRC = ./src/main.cu
 
 build:
-	$(CC) src/main.cu -o $(TARGETS) $(KERNELS)
+	$(CC)  $(MAINSRC) -o $(TARGETS) $(KERNELS)
 
 run:
-	$(CC) src/main.cu -o $(TARGETS) $(KERNELS)
+	$(CC) $(MAINSRC) -o $(TARGETS) $(KERNELS)
 	./$(TARGETS)
 	rm -r $(TARGETS)
 
